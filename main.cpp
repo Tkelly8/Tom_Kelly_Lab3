@@ -12,14 +12,16 @@ static LSM6DSLSensor acc_gyro(&devI2c, 0xD4, D4, D5);// high address
 
 float computeAngle(int x, int y, int z){
 
-  float res = (atan((x)/(sqrt((y*y)+(z*z)))) * (180 / PI)); //equation 6 as given and converted to degrees.
+  float res;  //added this on a seperate line
+  res =(float)(atan((x)/(sqrt((y*y)+(z*z)))) * (180 / PI)); //equation 6 as given and converted to degrees.
 
   return res;
 }
 
 float computeroll(int x, int y, int z){
 
-  float roll = (atan((y)/(sqrt((x*x)+(z*z)))) * (180 / PI));//equation 7 as given and converted to degrees.
+  float roll;
+  roll = (float)(atan((y)/(sqrt((x*x)+(z*z)))) * (180 / PI));//equation 7 as given and converted to degrees.
 
   return roll;
 
