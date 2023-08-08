@@ -70,4 +70,5 @@ int main() {
 
 
         thread_sleep_for(2000);  //sleep 2 seconds and return to begining of loop
+    }
 }
